@@ -1,16 +1,26 @@
-abstract class User {
+class User {
     private id: number;
-    public nome: string;
+    public name: string;
     public email: string|null;
-    private senha_hash: string;
+    private passwordHash: string;
+    public role: string;
+    public crefito: string;
+    public physioId: number;
+    public physio: User;
+    public patients: User[];
+    public protocols: Protocol[];
 
 
-    constructor(nome:string, email: string){
+    constructor(id:number, name:string, email: string, passwordHash:string, role:string, crefito:string, physioId:number, physio:User, patients:User[], protocols:Protocol[]){
         this.id = 0;
-        this.nome = nome;
+        this.name = name;
         this.email= email;
-        this.senha_hash = ""; 
+        this.passwordHash = "";
+        this.role = role;
+        this.crefito = crefito;
+        this.physioId = physioId;
+        this.physio = physio;
+        this.patients = patients;
+        this.protocols = protocols;
     }
-
-    abstract cadastrar(): void;
 }

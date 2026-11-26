@@ -1,22 +1,23 @@
 class Protocol {
     public id: number;
-    public pcte_id: number;
-    public fisio_id: number;
-    public titulo: string;
-    public inicio: Date;
-    public fim:Date;
-    public ativo: boolean;
-    public exors: string[];
+    public title: string;
+    public start: Date;
+    public end:Date;
+    public patient_id: number;
+    public physio_id: number;
+    public sessionsPerWeek: number;
+    public active: boolean
+    public exercises: Exercise[]
 
-    constructor(id:number, pcte_id:number, fisio_id:number, titulo:string, inicio: Date, fim:Date, ativo:boolean, exors:string[]) {
-        this.id = id;
-        this.pcte_id = pcte_id;
-        this.fisio_id = fisio_id;
-        this.titulo = titulo;
-        this.inicio = inicio;
-        this.fim = fim;
-        this.ativo = ativo;
-        this.exors = exors;
-    }
-    
+    constructor(id:number, title:string, start: Date, end:Date, patient_id:number, physio_id:number, sessionsPerWeek:number, active:boolean, exercises:Exercise[]) {
+        this.id = id
+        this.title = title
+        this.start = start
+        this.end = end
+        this.patient_id = patient_id
+        this.physio_id = physio_id
+        this.sessionsPerWeek = sessionsPerWeek
+        this.active = active
+        this.exercises = exercises
+    } 
 }
