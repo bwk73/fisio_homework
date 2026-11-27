@@ -6,8 +6,10 @@ class ProtocolExor {
     public reps: number;
     public position: number; 
     public instructions: string;
+    public createdAt: string;
+    public updatedAt: string;
 
-    constructor(id:number, protocolId:number, exerciseId:number, series:number, reps:number, position:number, instructions:string){
+    constructor(id:number, protocolId:number, exerciseId:number, series:number, reps:number, position:number, instructions:string, createdAt:string, updatedAt:string){
         this.id = id;
         this.protocolId = protocolId;
         this.exerciseId = exerciseId;
@@ -15,5 +17,7 @@ class ProtocolExor {
         this.reps = reps;
         this.position = position;
         this.instructions = instructions;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 }

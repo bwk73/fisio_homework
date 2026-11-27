@@ -5,15 +5,17 @@ class User {
     private passwordHash: string;
     public role: Role;
     public crefito: string;
+    public physioId: string;
     public createdAt: string;
+    public updatedAt: string;
 
-    constructor(id:string, name:string, email: string, passwordHash:string, role:Role, crefito:string, createdAt:string){
-        this.id = id;
+    constructor(name:string, email: string, role:Role, crefito:string, physioId:string, createdAt:string, updatedAt:string){
         this.name = name;
         this.email= email;
-        this.passwordHash = passwordHash;
         this.role = role;
         this.crefito = crefito;
+        this.physioId = physioId;
         this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 }

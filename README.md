@@ -16,9 +16,9 @@ Pacientes deixam de fazer os exercícios prescritos em casa. O fisioterapeuta n�
 
 REQUISITOS
 • Frontend moderno: React com Vite.
-• Backend com API REST: Hono (TypeScript).
+• Backend com API REST: Express.
 • CRUD: pacientes, protocolos, exercícios e registros.
-• Banco de dados: PostgreSQL em produção. SQLite no desenvolvimento local. 
+• Banco de dados: PostgreSQL em produção e no desenvolvimento local. 
 • Requisições assíncronas: o React consome a API com fetch ou Axios.
 • Login: JWT, com senha armazenada como hash (bcrypt).
 • API externa: YouTube Data API v3. A chave fica no backend, nunca no frontend.
