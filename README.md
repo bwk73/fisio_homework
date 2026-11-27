@@ -2,7 +2,7 @@ README
 
 Este repositório contém o projeto final acadêmico destinado à finalização da unidade curricular de Programação Full Stack do Curso de Análise e Desenvolvimento de Sistemas (ADS) do Centro Universitário UNISENAC - RS em Porto Alegre, Rio Grande do Sul, Brasil, ao final do segundo semestre do ano de 2026.
 
-O seu objetivo é o de desenvolver uma aplicação web Full Stack que resolba um problema real por meio de uma interface web, um backend com API REST e um banco de dados.
+O seu objetivo é o de desenvolver uma aplicação web Full Stack que resolva um problema real por meio de uma interface web, um backend com API REST e um banco de dados.
 
 PROPOSTA
 Fisio Homework, acompanhamento de exercícios domiciliares. Fisioterapeutas passam exercícios para casa e não sabem se o paciente faz. O Fisio Homework mostra ao terapeuta quanto o paciente cumpriu e quando a dor piora, para ele ajustar o tratamento antes da próxima consulta.
@@ -16,7 +16,7 @@ Pacientes deixam de fazer os exercícios prescritos em casa. O fisioterapeuta n�
 
 REQUISITOS
 • Frontend moderno: React com Vite.
-• Backend com API REST: FastAPI (Python).
+• Backend com API REST: Hono (TypeScript).
 • CRUD: pacientes, protocolos, exercícios e registros.
 • Banco de dados: PostgreSQL em produção. SQLite no desenvolvimento local. 
 • Requisições assíncronas: o React consome a API com fetch ou Axios.
