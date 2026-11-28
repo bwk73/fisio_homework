@@ -27,26 +27,27 @@ REQUISITOS
 • Cuidado: dados de saúde são sensíveis pela LGPD (Lei 13.709/2018). Use dados fictícios no trabalho.
 
 MODELO DE DADOS
-1 fisioterapeuta : N pacientes
-1 paciente : 1 fisioterapeuta
+- 1 fisioterapeuta : N pacientes
 
-1 paciente : N protocolos
-1 protocolo : 1 paciente
+- 1 paciente : N protocolos
 
-1 protocolo : N exercícios
+- 1 fisioterapeuta : N protocolos
+
+- 1 protocolo : N exercícios
 
 Um registro liga um exercício a uma data.
 
-- usuario (id, nome, email, senha_hash, perfil: FISIOTERAPEUTA | PACIENTE)
+- User (id, name, email, passwordHash, role: PHYSIO | PATIENT).
    
-- paciente (id, nome, data_nascimento, fisioterapeuta_id -> usuario, usuario_id -> usuario, nullable)
+- Protocol (id, title, startDate, endDate, patientId, physioId, sessionsPerWeek, createdAt, archivedAt,updatedAt).
    
-- protocolo (id, paciente_id, titulo, data_inicio, data_fim, ativo)
+- Exercise (id, name, description,externalId, source, createdAt, updatedA).
    
-- exercicio (id, protocolo_id, nome, series, repeticoes, ordem)
-   
-- registro (id, exercicio_id, data, concluido, dor [0-10], observacao)
-            restrição: UNIQUE (exercicio_id, data)
+- ExecutionRecord (id, protocolExerciseId, performedOn, completed, pain, createdAt, updatedAt).
+
+- ProtocolExercise (id, protocolId, exerciseId, series, reps, position, instructions, createdAt, updatedAt).
+
+- ConsentRecord (id, userId, termVersion, acceptanceDate, createdAt, updatedAt).
 
 Uma regra de negócio importante: o registro é único por exercício e por dia. Assim o paciente pode corrigir o registro do mesmo dia sem criar duplicatas.
 

@@ -1,3 +1,5 @@
+import type { Role } from "@prisma/client";
+
 class User {
     private id: string;
     public name: string;

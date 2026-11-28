@@ -1,0 +1,13 @@
+// src/entities/User.ts
+import type { Role } from "@prisma/client";
+
+export class User {
+  id!: string;
+  name!: string;
+  email!: string;
+  passwordHash!: string;
+  role!: Role;
+  crefito!: string | null;
+  physioId!: string | null;
+  createdAt!: Date;
+}

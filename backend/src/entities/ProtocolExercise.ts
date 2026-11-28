@@ -1,4 +1,4 @@
-class ProtocolExor {
+class ProtocolExercise {
     public id:number;
     public protocolId: number;
     public exerciseId: number;
